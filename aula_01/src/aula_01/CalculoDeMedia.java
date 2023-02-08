@@ -21,8 +21,8 @@ public class CalculoDeMedia {
 		float n4=sc.nextFloat();
 		float media=(n1+n2+n3+n4)/4;
 		System.out.printf("A médio do aluno: "+ nome + " é : %.1f", media);
-	
-
+		
+		
 	}
 
 }
