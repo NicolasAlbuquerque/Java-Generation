@@ -31,8 +31,8 @@ public class Lista {
 				break;
 			case 2:
 				System.out.println("Listar todas as notas");
-				//for (var listaNota : notas)
-					//ystem.out.println(listaNota);
+				for (var listaNota : notas)
+					System.out.println(listaNota);
 				if(notas.isEmpty())
 					System.err.println("Base de dados Vazia!");
 				else

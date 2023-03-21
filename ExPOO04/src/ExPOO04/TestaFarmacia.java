@@ -3,16 +3,16 @@ package ExPOO04;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TestaFarmacia {
+public abstract class TestaFarmacia {
 
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
-		
+		int tipo;
 		ArrayList<Farmacia> medicamentos = new ArrayList<Farmacia>();
 		
 		long id;
-		String nome, nomeComercial, fabricante, foto, opcao;
+		String nome,principioAtivo,fragancia, nomeComercial, fabricante, foto, opcao;
 		float preco;
 		
 		do {
@@ -36,9 +36,33 @@ public class TestaFarmacia {
 		System.out.println("\nPreÃ§o: " );
 		preco = leia.nextFloat();
 		
-		Farmacia f1 = new Farmacia(id, nome, nomeComercial, fabricante, foto, preco);
+		System.out.println("\n tipo");
+		tipo =leia.nextInt();
 		
-		medicamentos.add(f1);
+		switch(tipo) {
+		case 1 ->{
+			System.out.println("\nprincipio ativo: " );
+			principioAtivo = leia.nextLine();
+			
+			Medicamento m=new Medicamento (id, opcao, opcao, opcao, opcao, preco, tipo, opcao);
+			
+			
+			Medicamento m1 = new Medicamento(id, nome, nomeComercial, fabricante, foto, preco,tipo,principioAtivo);
+			medicamentos.add(m1);
+			
+		}
+		case 2 ->{
+			System.out.println("\nFragancia: " );
+			fragancia = leia.nextLine();
+			}
+		Perfumaria p1 = new Perfumaria(id, nome, nomeComercial, fabricante, foto, preco,tipo,fragancia);
+		perfumaria.add(p1);
+		
+		}
+	
+		Medicamento m1 = new Medicamento(id, nome, nomeComercial, fabricante, foto, preco,tipo,principioAtivo);
+
+		medicamentos.add(m1);
 		
 		System.out.println("\nDeseja continuar? " );
 		leia.skip("\\R?");
